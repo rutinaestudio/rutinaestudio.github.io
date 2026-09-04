@@ -1,0 +1,19 @@
+/* Añadidos solo para la página de una app. El resto viene de ../estilo.css */
+
+/* Las capturas van en fila, con su pie corto: se entiende la app
+   mirando solo los pies, sin leer nada más. */
+.caps{ display:flex; gap:16px; overflow-x:auto; margin:28px -24px; padding:0 24px 8px; }
+.cap{ margin:28px 0; }
+.cap img{
+  display:block; width:100%; max-width:260px; height:auto;
+  border:1px solid var(--linea); border-radius:14px;
+}
+.cap figcaption{
+  color:var(--gris); font-size:13px; margin-top:8px;
+}
+
+/* En pantalla ancha, las capturas de la sección «Qué trae» van en rejilla */
+@media (min-width:720px){
+  .cap{ display:inline-block; vertical-align:top; width:calc(50% - 12px); margin:20px 8px 20px 0; }
+  .cap img{ max-width:100%; }
+}
